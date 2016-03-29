@@ -5,9 +5,14 @@
 language: objective-c
 # cache: cocoapods
 # podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+before_install:
+- gem install xcpretty -N --no-ri --no-rdoc
+- gem install activesupport 
+- gem install cocoapods --pre --quiet --no-ri --no-rdoc
+- pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/ImageColors.xcworkspace -scheme ImageColors-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail
+- xcodebuild test -workspace Example/ImageColors.xcworkspace -scheme ImageColors-Example -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 4s" destination "platform=iOS Simulator,name=iPhone 6 Plus" ONLY_ACTIVE_ARCH=NO | xcpretty -c
 - pod lib lint
+after_success:
+- bash <(curl -s https://codecov.io/bash)
