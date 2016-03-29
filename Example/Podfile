@@ -1,11 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
 use_frameworks!
 
 target 'ImageColors_Example' do
     
   pod 'ImageColors', :path => '../'
-  pod 'AlamofireImage', '~> 1.0'
-  pod 'Alamofire', '~> 3.0'
+  pod 'AlamofireImage'
+  pod 'Alamofire'
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   
 end

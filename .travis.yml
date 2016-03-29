@@ -6,13 +6,15 @@ language: objective-c
 # cache: cocoapods
 # podfile: Example/Podfile
 before_install:
-- gem install xcpretty -N --no-ri --no-rdoc
-- gem install activesupport 
-- gem install cocoapods --pre --quiet --no-ri --no-rdoc
+- gem install activesupport
+- gem update cocoapods
 - pod install --project-directory=Example
 script:
 - set -o pipefail
-- xcodebuild test -workspace Example/ImageColors.xcworkspace -scheme ImageColors-Example -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 4s" destination "platform=iOS Simulator,name=iPhone 6 Plus" ONLY_ACTIVE_ARCH=NO | xcpretty -c
-- pod lib lint
+- xctool test -workspace Example/ImageColors.xcworkspace -scheme ImageColors-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- pod lib lint --no-clean
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+- echo '\ndone!\n'
+- gem cocoapod --version
+- xctool -version
+- xcodebuild -version -sdk
