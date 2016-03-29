@@ -1,6 +1,4 @@
 
-![alt tag](http://images.hgmsites.net/lrg/car-thief_100353539_l.jpg)
-
 ![alt tag](http://i.imgur.com/3c0fptG.gif)
 
 ![alt tag](http://meowgifs.com/wp-content/uploads/2013/09/cat-stealign-from-a-drawer.gif)
@@ -11,6 +9,7 @@
 
 ![alt tag](https://media.giphy.com/media/5cdenDXni65aM/giphy.gif)
 
+![alt tag](http://images.hgmsites.net/lrg/car-thief_100353539_l.jpg)
 
 
 # ImageColors
