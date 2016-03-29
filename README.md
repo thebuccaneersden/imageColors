@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 --
 
+![alt tag](http://www.labvidas.com.br/robitto/github/imageColorsUpdated.png)
+
 ```ruby
 UIImage.getColors({ (imageColors) -> Void in
 
