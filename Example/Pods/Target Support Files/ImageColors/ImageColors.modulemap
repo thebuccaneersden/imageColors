@@ -1,0 +1,6 @@
+framework module ImageColors {
+  umbrella header "ImageColors-umbrella.h"
+
+  export *
+  module * { export * }
+}
